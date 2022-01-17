@@ -1,0 +1,98 @@
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    /* width: 100px; */
+    height: 290px; 
+    /* border: 1px solid black; */
+}
+
+#slide {
+    position: absolute;
+    left: -400%;
+    /* width: 100px; */
+    height: 100px;
+    background: blue;
+    -webkit-animation: slidein 100s forwards;
+    -webkit-animation-delay: 5s;
+    animation: slidein 100s forwards;
+	animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+
+@-webkit-keyframes slidein {
+	0%{left: 0;}
+	25%{left: -80%;}
+	50%{left: -160%;}
+	75%{left: -240%;}
+	100%{left: -300%;}
+ }
+
+@keyframes slidein {
+	0%{left: 0;}
+	25%{left: -80%;}
+	50%{left: -160%;}
+	75%{left: -240%;}
+	100%{left: -300%;}
+}
+/* 0 0
+10 20
+15 40
+20 60
+25 80
+30 100
+35 120
+40 140
+45 160
+50 180
+55 200
+60 220
+65 240
+70 260
+75 280
+80 300
+85 320
+90 340
+95 360
+100 380 */
+
+
+body {
+	/* display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh; */
+	/* background-color: #2B2B2B; */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  /* display: flex; */
+  justify-content: center;
+}
+  .loader__container {
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    height: 40px;
+  }
+
+  .loader__film {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    /* display: flex; */
+  }
+
+  .loader__film-img {
+    animation: rotate 1.5s linear infinite;
+  }
